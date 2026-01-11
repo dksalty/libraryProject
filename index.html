@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+     <div id="sidebar">
+      <p>Welcome to your library.
+      </p>
+      <button id="addBook">Add Book</button>
+     </div>
+    <div class="container">
+    <div id="theHobbit" class="book">
+      <p>The Hobbit</p>
+      <p>By: J.R.R. Tolkien</p>
+      <p>Pages: 295</p>
+      <p>Not yet read</p>
+      <button class="remove">Remove</button>
+    </div>
+      
+    <div id="dune" class="book">
+      <p>Dune</p>
+      <p>By: Frank Herbert</p>
+      <p>Pages: 412</p>
+      <p>Not yet read</p>
+      <button class="remove">Remove</button>
+    </div>
+    </div>
+    <dialog id="dialog">
+  <form method="dialog">
+
+    <label for="bookTitle">Book title:</label>
+    <input
+      type="text"
+      id="bookTitle"
+      name="bookTitle"
+      required
+    >
+
+    <label for="authorName">Author name:</label>
+    <input
+      type="text"
+      id="authorName"
+      name="authorName"
+      required
+    >
+
+    <label for="numberOfPages">Number of pages:</label>
+    <input
+      type="number"
+      id="numberOfPages"
+      name="numberOfPages"
+      min="1"
+      required
+    >
+
+    <div>
+      <button type="button" id="cancel">Cancel</button>
+      <button type="submit">Confirm</button>
+    </div>
+
+  </form>
+</dialog>
+ <script src="index.js"></script>   
+</body>
+</html>
