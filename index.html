@@ -13,49 +13,28 @@
       <button id="addBook">Add Book</button>
      </div>
     <div class="container">
-    <div id="theHobbit" class="book">
-      <p>The Hobbit</p>
-      <p>By: J.R.R. Tolkien</p>
-      <p>Pages: 295</p>
-      <p>Not yet read</p>
-      <button class="remove">Remove</button>
     </div>
-      
-    <div id="dune" class="book">
-      <p>Dune</p>
-      <p>By: Frank Herbert</p>
-      <p>Pages: 412</p>
-      <p>Not yet read</p>
-      <button class="remove">Remove</button>
-    </div>
-    </div>
-    <dialog id="dialog">
+<dialog id="dialog">
   <form method="dialog">
 
     <label for="bookTitle">Book title:</label>
-    <input
-      type="text"
-      id="bookTitle"
-      name="bookTitle"
-      required
-    >
+    <input type="text" id="bookTitle" name="bookTitle" required>
 
     <label for="authorName">Author name:</label>
-    <input
-      type="text"
-      id="authorName"
-      name="authorName"
-      required
-    >
+    <input type="text" id="authorName" name="authorName" required>
 
     <label for="numberOfPages">Number of pages:</label>
-    <input
-      type="number"
-      id="numberOfPages"
-      name="numberOfPages"
-      min="1"
-      required
-    >
+    <input type="number" id="numberOfPages" name="numberOfPages" min="1" required>
+
+    <fieldset>
+      <legend>Have you read this book?</legend>
+
+      <input type="radio" id="readYes" name="hasRead" value="true" required>
+      <label for="readYes">Yes</label>
+
+      <input type="radio" id="readNo" name="hasRead" value="false">
+      <label for="readNo">No</label>
+    </fieldset>
 
     <div>
       <button type="button" id="cancel">Cancel</button>
@@ -64,6 +43,19 @@
 
   </form>
 </dialog>
- <script src="index.js"></script>   
+<dialog id="bookmarkDialog">
+  <form>
+    <label>
+      Bookmark page:
+      <input type="number" id="bookmarkInput" min="1" required>
+    </label>
+
+    <div>
+      <button type="button" id="bookmarkCancel">Cancel</button>
+      <button type="submit">Save</button>
+    </div>
+  </form>
+</dialog>
+<script src="practice3.js"></script> 
 </body>
 </html>
