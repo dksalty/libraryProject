@@ -1,14 +1,17 @@
 
 body {
-display:flex;
-gap: 25px;
-flex-wrap: wrap;
-align-content: flex-start;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
 }
-.container {
+
+ .container {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
+  justify-content: flex-start; 
+  align-content: flex-start;
 }
 .book {
   display: flex;
@@ -20,13 +23,17 @@ align-content: flex-start;
   flex-direction: column;
   font-size: 20px;
   font-weight: bold;
+  box-sizing: border-box;
 }
- 
- #sidebar {
- background-color: rgb(175, 167, 151);  
- height: 100vh;
- width: 20vw; 
- }
+
+#sidebar {
+  background-color: rgb(175, 167, 151);  
+  height: 100vh;
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 button {
   margin-top: 15px;
 }
@@ -36,7 +43,8 @@ flex-direction: column;
 align-items: center;
 }
 #addBook {
-width: 170px;
+width: 80%;
+max-width: 170px;
 }
 .toggle-read {
   margin-top: 10px;
