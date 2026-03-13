@@ -12,7 +12,8 @@ let activeBookmarkBook = null;
 
 let myLibrary = [];
 
-function Book(title, author, pages, bookmark = null, hasRead = false){
+class Book {
+constructor(title, author, pages, bookmark = null, hasRead = false){
 this.id = crypto.randomUUID();
 this.title = title;
 this.author = author;
@@ -20,10 +21,11 @@ this.pages = pages;
 this.hasRead = hasRead;
 this.bookmark = bookmark;
 }
-
-Book.prototype.toggleRead =  function () {
-this.hasRead = !this.hasRead;
+toggleRead() {
+this.hasRead = !this.hasRead
 };
+}
+
 
 function addBookToLibrary(title, author, pages, hasRead, bookmark = 1){
 const book = new Book(title, author, pages, bookmark, hasRead);
