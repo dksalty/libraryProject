@@ -113,6 +113,35 @@ dialog.showModal();
 cancelBtn.addEventListener('click', () => {
 dialog.close();
 });
+const titleInput = document.getElementById('bookTitle');
+const authorInput = document.getElementById('authorName');
+const pagesInput = document.getElementById('numberOfPages');
+
+titleInput.addEventListener('input', () => {
+  if (titleInput.validity.valueMissing) {
+    titleInput.setCustomValidity('Please enter a book title.');
+  } else {
+    titleInput.setCustomValidity('');
+  }
+});
+
+authorInput.addEventListener('input', () => {
+  if (authorInput.validity.valueMissing) {
+    authorInput.setCustomValidity("Please enter the author's name.");
+  } else {
+    authorInput.setCustomValidity('');
+  }
+});
+
+pagesInput.addEventListener('input', () => {
+  if (pagesInput.validity.valueMissing) {
+    pagesInput.setCustomValidity('Please enter the number of pages.');
+  } else if (pagesInput.validity.rangeUnderflow) {
+    pagesInput.setCustomValidity('Number of pages must be at least 1.');
+  } else {
+    pagesInput.setCustomValidity('');
+  }
+});
 
 form.addEventListener('submit', (e) => {
  e.preventDefault();
